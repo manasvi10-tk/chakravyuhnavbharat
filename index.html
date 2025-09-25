@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Chakravyuh: NavBharat Game Innovators Webinar</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Orbitron:wght@600;800&display=swap" rel="stylesheet"/>
+  <style>
+    /* Global Reset */
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: #f9fafc;
+      color: #222;
+      line-height: 1.6;
+      overflow-x: hidden;
+      scroll-behavior: smooth;
+    }
+
+    /* Fade + Slide Animation */
+    [data-animate] { opacity: 0; transform: translateY(40px); transition: all 0.9s ease; }
+    [data-animate].active { opacity: 1; transform: translateY(0); }
+
+    /* ===== Hero Section ===== */
+    header {
+      background: linear-gradient(-45deg, #ff671f, #ff914d, #046A38, #1A73E8);
+      background-size: 400% 400%;
+      animation: gradientShift 12s ease infinite;
+      padding: 5rem 1.5rem;
+      text-align: center;
+      color: #fff;
+      position: relative;
+      overflow: hidden;
+    }
+
+    @keyframes gradientShift {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    header h1 {
+      font-family: 'Orbitron', sans-serif;
+      font-size: 3rem;
+      font-weight: 800;
+      margin-bottom: 0.8rem;
+      text-shadow: 0 4px 12px rgba(0,0,0,0.3);
+    }
+    header p { font-size: 1.3rem; opacity: 0.9; margin-bottom: 2rem; }
+
+    .btn {
+      display: inline-block;
+      padding: 1rem 2.5rem;
+      background: linear-gradient(90deg, #ff671f, #ff914d);
+      color: #fff;
+      border-radius: 50px;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 1.1rem;
+      transition: 0.3s;
+      box-shadow: 0 6px 20px rgba(255,103,31,0.4);
+    }
+    .btn:hover {
+      transform: translateY(-4px) scale(1.05);
+      box-shadow: 0 8px 24px rgba(255,103,31,0.6);
+    }
+
+    /* ===== Section Styling ===== */
+    section {
+      max-width: 1100px;
+      margin: auto;
+      padding: 5rem 1.5rem;
+      text-align: center;
+    }
+    section h2 {
+      font-size: 2.4rem;
+      margin-bottom: 1.2rem;
+      background: linear-gradient(90deg, #ff671f, #046A38);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      font-weight: 700;
+    }
+    section p {
+      font-size: 1.1rem;
+      margin-bottom: 2.5rem;
+      color: #555;
+    }
+
+    /* ===== Cards ===== */
+    .highlights, .benefits {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 2rem;
+    }
+    .card {
+      background: rgba(255, 255, 255, 0.8);
+      padding: 2rem;
+      border-radius: 20px;
+      box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+      backdrop-filter: blur(8px);
+      transition: 0.4s;
+      font-weight: 500;
+    }
+    .card:hover {
+      transform: translateY(-10px) scale(1.03);
+      box-shadow: 0 10px 35px rgba(0, 0, 0, 0.15);
+    }
+
+    /* ===== Guest List ===== */
+    ul {
+      list-style: none;
+      text-align: left;
+      max-width: 800px;
+      margin: auto;
+    }
+    ul li {
+      background: #fff;
+      padding: 1rem 1.2rem;
+      margin: 0.6rem 0;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+      font-size: 1.05rem;
+      transition: 0.3s;
+    }
+    ul li:hover { transform: translateX(8px); }
+
+    /* ===== Footer ===== */
+    footer {
+      background: #046A38;
+      color: #fff;
+      text-align: center;
+      padding: 3rem 1.5rem;
+      margin-top: 4rem;
+      position: relative;
+      z-index: 1;
+    }
+    footer h3 { font-size: 1.9rem; font-weight: 700; }
+    footer p { max-width: 720px; margin: 1.2rem auto; font-size: 1.1rem; }
+    footer a {
+      margin-top: 1.5rem;
+      display: inline-block;
+      background: linear-gradient(90deg, #ff671f, #ff914d);
+      padding: 1rem 2.5rem;
+      border-radius: 50px;
+      color: #fff;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 1.1rem;
+      transition: 0.3s;
+      box-shadow: 0 6px 20px rgba(255,103,31,0.4);
+    }
+    footer a:hover { transform: translateY(-4px); box-shadow: 0 8px 24px rgba(255,103,31,0.6); }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      header h1 { font-size: 2.4rem; }
+      section h2 { font-size: 2rem; }
+      .btn, footer a { font-size: 1rem; padding: 0.8rem 2rem; }
+    }
+  </style>
+</head>
+<body>
+  <!-- Hero Section -->
+  <header data-animate>
+    <h1>Chakravyuh: NavBharat Game Innovators Webinar 2025</h1>
+    <p>"From Epic Strategies to Digital Realities"</p>
+    <p>📍 Online Webinar | 2025</p>
+    <a href="#register" class="btn">Register Now</a>
+  </header>
+
+  <!-- Introduction -->
+  <section data-animate>
+    <h2>Introduction</h2>
+    <p>A national webinar on <b>Game Development & Innovation</b>, inspired by India’s history, strategy & storytelling. Bringing together developers, students, innovators, and thought leaders.</p>
+  </section>
+
+  <!-- Why Chakravyuh -->
+  <section data-animate>
+    <h2>Why Chakravyuh?</h2>
+    <p>Chakravyuh → An advanced strategic formation in Mahabharata. A symbol of <b>strategy, problem-solving & innovation</b>. Represents blending ancient wisdom with modern creativity.</p>
+  </section>
+
+  <!-- Event Highlights -->
+  <section data-animate>
+    <h2>Event Highlights</h2>
+    <div class="highlights">
+      <div class="card">🎮 Exploring AI, AR/VR & Metaverse Gaming</div>
+      <div class="card">🚀 Showcasing Indian startups & success stories</div>
+      <div class="card">📖 Workshops on storytelling from Indian history</div>
+      <div class="card">💼 Discussions on funding, careers & global opportunities</div>
+    </div>
+  </section>
+
+  <!-- Guest Profiles -->
+<!--    <section data-animate>
+    <h2>Guest Profiles</h2>
+    <ul>
+      <li>🎮 Game Studio Founders & Developers – Industry journeys</li>
+      <li>📖 Historians / Mythology Experts – Storytelling inspiration</li>
+      <li>🤖 Tech Innovators (AI/VR/AR) – Future of gaming</li>
+      <li>🏛 Policy / Startup India Experts – Government support</li>
+      <li>🎯 Pro Gamers & Influencers – Connect with youth</li>
+    </ul>
+  </section> -->
+
+  <!-- Benefits -->
+  <section data-animate>
+    <h2>Benefits for Attendees</h2>
+    <div class="benefits">
+      <div class="card">✅ Learn about cutting-edge tools & trends</div>
+      <div class="card">✅ Understand how heritage inspires modern games</div>
+      <div class="card">✅ Networking opportunities with industry leaders</div>
+      <div class="card">✅ Career guidance & mentorship</div>
+      <div class="card">✅ Digital certificates of participation</div>
+      <div class="card">✅ Chance for internships & collaborations</div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer data-animate>
+    <h3>Be Part of India’s Game Innovation Movement!</h3>
+    <p>"Chakravyuh: NavBharat Game Innovators Summit 2025" is more than a webinar— it’s a launchpad for India’s youth to transform epic strategies into digital realities.</p>
+    <a href="#register">Join Us Now</a>
+  </footer>
+
+  <script>
+    // Scroll Animation
+    const animatedElements = document.querySelectorAll('[data-animate]');
+    function revealOnScroll() {
+      const windowHeight = window.innerHeight;
+      animatedElements.forEach(el => {
+        const position = el.getBoundingClientRect().top;
+        if (position < windowHeight - 100) el.classList.add('active');
+      });
+    }
+    window.addEventListener('scroll', revealOnScroll);
+    window.addEventListener('load', revealOnScroll);
+  </script>
+</body>
+</html>
